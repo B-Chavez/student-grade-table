@@ -13,6 +13,7 @@ class App{
       $.ajax({
         method: 'GET',
         URL: 'https://github.com/Learning-Fuze/api/grades',
+        header: { 'X-Access-Token': 'VNjHTYBy' },
         success: function () {
           handleGetGradesSuccess()
         },
