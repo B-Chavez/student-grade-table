@@ -1,8 +1,8 @@
 class App{
-    constructor(
-      handleGetGradesError.bind(this);
-      handleGetGradesSuccess.bind(this);
-    )
+    constructor(){
+      this.handleGetGradesError = this.handleGetGradesError.bind(this);
+      this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
+    }
     handleGetGradesError (error){
       console.error(error)
     }
@@ -15,10 +15,14 @@ class App{
         URL: 'https://github.com/Learning-Fuze/api/grades',
         success: function () {
           handleGetGradesSuccess()
-        }
+        },
         error: function () {
           handleGetGradesError()
         }
       })
+    }
+
+    start(){
+      this.getGrades()
     }
 }
