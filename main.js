@@ -3,6 +3,6 @@ var myHeaderEl = document.querySelector("#header");
 
 var myPageHeader = new PageHeader(myHeaderEl);
 var myGradeTable = new GradeTable(myTableEl);
-var myApp = new App(myGradeTable);
+var myApp = new App(myGradeTable, myPageHeader);
 
 myApp.start()
