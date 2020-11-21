@@ -12,13 +12,14 @@ class App{
     getGrades () {
       $.ajax({
         method: 'GET',
-        URL: 'https://github.com/Learning-Fuze/api/grades',
-        header: { 'X-Access-Token': 'VNjHTYBy' },
-        success: function () {
-          handleGetGradesSuccess()
+        url: 'https://sgt.lfzprototypes.com/api/grades',
+        headers: { 'x-access-token': 'VNjHTYBy' },
+        success: function (data) {
+          mySelfApp.handleGetGradesSuccess(data)
+          console.log(data)
         },
-        error: function () {
-          handleGetGradesError()
+        error: function (data) {
+          mySelfApp.handleGetGradesError(data)
         }
       })
     }
@@ -27,3 +28,5 @@ class App{
       this.getGrades()
     }
 }
+
+let mySelfApp = new App;
