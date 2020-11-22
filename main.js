@@ -1,5 +1,5 @@
 var myTableEl = document.getElementsByName("table");
-var myHeaderEl = document.querySelector("#header");
+var myHeaderEl = document.querySelector("span");
 
 var myPageHeader = new PageHeader(myHeaderEl);
 var myGradeTable = new GradeTable(myTableEl);

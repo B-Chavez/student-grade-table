@@ -12,10 +12,8 @@ class App{
       this.gradeTable.updateGrades(grades)
       var gradesSum = 0;
       for(var i = 0; i < grades.length; i++){
-          console.log(grades[i].grade)
           gradesSum += grades[i].grade
       }
-      console.log(gradesSum)
       var gradesAvg = gradesSum / grades.length;
       this.pageHeader.updateAverage(gradesAvg);
     }
