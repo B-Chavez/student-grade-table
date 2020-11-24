@@ -1,0 +1,10 @@
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-sm:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+}
