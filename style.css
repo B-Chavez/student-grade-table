@@ -8,3 +8,15 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.input-container{
+    display: flex;
+}
+
+.btn-light{
+    border: 1px darkgray solid;
+}
+
+.input-container{
+    padding: 10px 0;
+}
