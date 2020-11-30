@@ -11,12 +11,13 @@
 
 .input-container{
     display: flex;
+    padding: 10px 0;
 }
 
 .btn-light{
     border: 1px darkgray solid;
 }
 
-.input-container{
-    padding: 10px 0;
+.input-group{
+    flex-direction: column;
 }
