@@ -34,11 +34,29 @@ class App{
 
     start(){
       this.getGrades()
-      this.gradeForm.onSubmit(this.gradeForm);
+      gradeForm.onSubmit(this.gradeForm);
     }
 
     createGrade(name, course, grade){
       console.log(name + " " + course + " " + grade);
+      $.ajax({
+        method: 'POST',
+        url: 'https://github.com/Learning-Fuze/sgt_api',
+        headers: {
+          'x-access-token': 'VNjHTYBy',
+        },
+        data: {
+          'name': name,
+          'course': course,
+          'grade': grade
+        },
+        success: function (){
+          console.log("Success!")
+        },
+        error: function (){
+          console.log("Error!")
+        }
+      })
     }
 
     handleCreateGradeError(error){
