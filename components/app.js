@@ -41,7 +41,7 @@ class App{
       console.log(name + " " + course + " " + grade);
       $.ajax({
         method: 'POST',
-        url: 'https://github.com/Learning-Fuze/sgt_api',
+        url: 'https://sgt.lfzprototypes.com/api/grades',
         headers: {
           'x-access-token': 'VNjHTYBy',
         },
