@@ -38,7 +38,6 @@ class App{
     }
 
     createGrade(name, course, grade){
-      console.log(name + " " + course + " " + grade);
       $.ajax({
         method: 'POST',
         url: 'https://sgt.lfzprototypes.com/api/grades',
@@ -50,12 +49,8 @@ class App{
           'course': course,
           'grade': grade
         },
-        success: function (){
-          console.log("Success!")
-        },
-        error: function (){
-          console.log("Error!")
-        }
+        success: this.handleGetGradesSuccess,
+        error: this.handleCreateGradeError
       })
     }
 
