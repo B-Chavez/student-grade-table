@@ -18,6 +18,12 @@ class GradeTable{
             this.renderGradeRow(grades[i].grade, this.deleteGrade());
 
         }
+        if(grades === false){
+            document.querySelector("p").classList = "";
+        } else {
+            document.querySelector("p").classList = "d-none";
+        }
+
     }
     onDeleteClick(deleteGrade){
         this.deleteGrade = deleteGrade;
