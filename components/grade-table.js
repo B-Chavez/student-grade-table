@@ -15,7 +15,8 @@ class GradeTable{
              createTDCol3.append(grades[i].grade);
              createTR.append(createTDCol1, createTDCol2, createTDCol3);
              tbody.append(createTR);
-            this.renderGradeRow(grades[i].grade, this.deleteGrade());
+            var row = this.renderGradeRow(grades[i], this.deleteGrade)
+
 
         }
         if(grades === false){
@@ -25,6 +26,7 @@ class GradeTable{
         }
 
     }
+
     onDeleteClick(deleteGrade){
         this.deleteGrade = deleteGrade;
     }
@@ -46,7 +48,11 @@ class GradeTable{
             createTDCol4.append(createButton);
             createTR.append(createTDCol1, createTDCol2, createTDCol3, createTDCol4);
 
-            createButton.addEventListener('click', deleteGrade(data.id));
+        createButton.addEventListener('click', function () {
+            deleteGrade(data.id)
+        });
             return createTR;
     }
+
+
 }
