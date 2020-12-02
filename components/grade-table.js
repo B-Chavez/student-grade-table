@@ -28,8 +28,16 @@ class GradeTable{
             var createTDCol4 = document.createElement("td");
             var createButton = document.createElement("button");
 
+
+            createTDCol1.textContent = data.name;
+            createTDCol2.textContent = data.course;
+            createTDCol3.textContent = data.grade;
+            createButton.textContent = "Delete"
             createButton.classList = "btn-danger"
             createTDCol4.append(createButton);
             createTR.append(createTDCol1, createTDCol2, createTDCol3, createTDCol4);
+
+            createButton.addEventListener('click', deleteGrade(data.id));
+            return createTR;
     }
 }
