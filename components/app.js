@@ -49,7 +49,7 @@ class App{
           'course': course,
           'grade': grade
         },
-        success: this.handleGetGradesSuccess,
+        success: this.handleCreateGradeSuccess,
         error: this.handleCreateGradeError
       })
     }
