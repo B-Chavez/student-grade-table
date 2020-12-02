@@ -8,16 +8,3 @@
     display: flex;
     justify-content: flex-end;
 }
-
-.input-container{
-    display: flex;
-    padding: 10px 0;
-}
-
-.btn-light{
-    border: 1px darkgray solid;
-}
-
-.input-group{
-    flex-direction: column;
-}

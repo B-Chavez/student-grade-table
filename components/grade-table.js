@@ -11,9 +11,11 @@ class GradeTable{
              var createTDCol3 = document.createElement("td");
              createTDCol1.append(grades[i].name);
              createTDCol2.append(grades[i].course);
-             createTDCol3.append(grades[i].grade)
+             createTDCol3.append(grades[i].grade);
              createTR.append(createTDCol1, createTDCol2, createTDCol3);
-             tbody.append(createTR)
+             tbody.append(createTR);
+            this.renderGradeRow(grades[i].grade, this.deleteGrade());
+
         }
     }
     onDeleteClick(deleteGrade){
