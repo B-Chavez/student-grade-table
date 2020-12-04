@@ -9,18 +9,6 @@ class GradeTable{
              let row = this.renderGradeRow(grades[i], this.deleteGrade);
              tbody.append(row);
 
-             var createTR = document.createElement("tr");
-             var createTDCol1 = document.createElement("td");
-             var createTDCol2 = document.createElement("td");
-             var createTDCol3 = document.createElement("td");
-             createTDCol1.append(grades[i].name);
-             createTDCol2.append(grades[i].course);
-             createTDCol3.append(grades[i].grade);
-             createTR.append(createTDCol1, createTDCol2, createTDCol3);
-             tbody.append(createTR);
-            var row = this.renderGradeRow(grades[i], this.deleteGrade)
-
-
         }
         if(grades === false){
             document.querySelector("p").classList = "";
