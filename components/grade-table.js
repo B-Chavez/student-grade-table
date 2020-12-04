@@ -10,10 +10,11 @@ class GradeTable{
              tbody.append(row);
 
         }
-        if(grades === false){
-            document.querySelector("p").classList = "";
+        console.log(grades)
+        if (grades.length === 0){
+            document.querySelector("p").classList.remove("d-none");
         } else {
-            document.querySelector("p").classList = "d-none";
+            document.querySelector("p").classList.add("d-none");
         }
 
     }
@@ -42,11 +43,11 @@ class GradeTable{
             createButton.classList.add("btn-danger");
             createTDCol4.append(createButton);
             createTR.append(createTDCol1, createTDCol2, createTDCol3, createTDCol4);
-            
+
             createButton.addEventListener('click', function(){
                 deleteGrade(data.id)
             });
-            
+
 
             createButton.addEventListener('click', function(){
                 deleteGrade(data.id)
