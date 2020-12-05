@@ -5,12 +5,14 @@ class GradeTable{
     }
     updateGrades(grades){
         var tbody = document.querySelector("tbody");
+        tbody.innerHTML = "";
         for(var i = 0; i < grades.length; i++){
              let row = this.renderGradeRow(grades[i], this.deleteGrade);
+             
              tbody.append(row);
 
         }
-        if (grades){
+        if (grades.length){
             document.querySelector("p").classList.add("d-none");
         } else {
             document.querySelector("p").classList.remove("d-none");
