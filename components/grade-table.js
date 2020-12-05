@@ -10,11 +10,11 @@ class GradeTable{
              tbody.append(row);
 
         }
-        console.log(grades)
-        if (grades.length === 0){
-            document.querySelector("p").classList.remove("d-none");
-        } else {
+        if (grades){
             document.querySelector("p").classList.add("d-none");
+        } else {
+            document.querySelector("p").classList.remove("d-none");
+            
         }
 
     }
@@ -48,10 +48,6 @@ class GradeTable{
                 deleteGrade(data.id)
             });
 
-
-            createButton.addEventListener('click', function(){
-                deleteGrade(data.id)
-            });
             return createTR;
     }
 
