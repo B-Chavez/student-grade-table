@@ -13,9 +13,9 @@ class GradeTable{
 
         }
         if (grades.length){
-            document.querySelector("p").classList.add("d-none");
+            this.noGradesElement.classList.add("d-none");
         } else {
-            document.querySelector("p").classList.remove("d-none");
+            this.noGradesElement.classList.remove("d-none");
             
         }
 
@@ -26,7 +26,7 @@ class GradeTable{
     }
 
     deleteGrade(data){
-        console.log(data)
+        console.error('ID:', data, ' Error called out of sequence')
     }
 
     renderGradeRow(data, deleteGrade){
