@@ -8,7 +8,7 @@ class GradeTable{
         tbody.innerHTML = "";
         for(var i = 0; i < grades.length; i++){
              let row = this.renderGradeRow(grades[i], this.deleteGrade);
-             
+
              tbody.append(row);
 
         }
@@ -16,7 +16,7 @@ class GradeTable{
             this.noGradesElement.classList.add("d-none");
         } else {
             this.noGradesElement.classList.remove("d-none");
-            
+
         }
 
     }
@@ -36,14 +36,16 @@ class GradeTable{
             var createTDCol3 = document.createElement("td");
             var createTDCol4 = document.createElement("td");
             var createButton = document.createElement("button");
-
+            let createButton2 = document.createElement("button");
 
             createTDCol1.textContent = data.name;
             createTDCol2.textContent = data.course;
             createTDCol3.textContent = data.grade;
-            createButton.textContent = "Delete"
+            createButton.textContent = "Delete";
+            createButton2.textContent = "Edit";
             createButton.classList.add("btn-danger");
-            createTDCol4.append(createButton);
+            createButton2.classList.add("btn-info");
+            createTDCol4.append(createButton2, createButton);
             createTR.append(createTDCol1, createTDCol2, createTDCol3, createTDCol4);
 
             createButton.addEventListener('click', function(){
